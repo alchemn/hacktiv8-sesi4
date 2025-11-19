@@ -52,6 +52,7 @@ export async function generateFromDocument(req,res){
                 {inlineData: {data: base64Document, mimeType: req.file.mimetype}}
             ],
         })
+        res.status(200).json({result: response.text})
     } catch (error) {
         console.log(error)
         res.status(500).json({error: error.message})
@@ -70,6 +71,7 @@ try {
             {inlineData: {data:base64Audio, mimeType: req.file.mimetype}}
         ]
         })
+        res.status(200).json({result: response.text})
 } catch (error) {
     console.log(error)
     res.status(500).json({error: error.message})
