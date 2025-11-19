@@ -1,6 +1,5 @@
 import express from 'express'
 import router from './router/generate.js'
-
 const app = express()
 
 
